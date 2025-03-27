@@ -1,0 +1,29 @@
+<svg 
+  viewBox="0 0 60 60" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Favicon version - just the skid steer icon -->
+  <g>
+    <!-- Base/Ground -->
+    <path d="M5 45H50V48H5V48Z" fill="#6D28D9" />
+    
+    <!-- Tracks -->
+    <path d="M8 45V35H15V45H8Z" fill="#6D28D9" />
+    <path d="M40 45V35H47V45H40Z" fill="#6D28D9" />
+    
+    <!-- Body/Cab -->
+    <path d="M15 42H40V35H15V42Z" fill="#6D28D9" />
+    <path d="M18 35V30H37V35H18Z" fill="#6D28D9" /> <!-- Cab top -->
+    
+    <!-- Lift Arms -->
+    <path d="M15 38L10 30H15V38Z" fill="#6D28D9" />
+    <path d="M40 38L45 30H40V38Z" fill="#6D28D9" />
+    
+    <!-- Bucket -->
+    <path d="M10 30H45V27H10V30Z" fill="#6D28D9" />
+    <path d="M10 27H13V22H10V27Z" fill="#6D28D9" />
+    <path d="M42 27H45V22H42V27Z" fill="#6D28D9" />
+    <path d="M13 22H42V25H13V22Z" fill="#6D28D9" />
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg 
+  viewBox="0 0 360 60" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g>
+    <!-- Skid Steer Silhouette -->
+    <!-- Base/Ground -->
+    <path d="M15 45H50V48H15V45Z" fill="#6D28D9" />
+    
+    <!-- Tracks -->
+    <path d="M18 45V35H25V45H18Z" fill="#6D28D9" />
+    <path d="M40 45V35H47V45H40Z" fill="#6D28D9" />
+    
+    <!-- Body/Cab -->
+    <path d="M25 42H40V35H25V42Z" fill="#6D28D9" />
+    <path d="M28 35V30H37V35H28Z" fill="#6D28D9" /> <!-- Cab top -->
+    
+    <!-- Lift Arms -->
+    <path d="M25 38L20 30H25V38Z" fill="#6D28D9" />
+    <path d="M40 38L45 30H40V38Z" fill="#6D28D9" />
+    
+    <!-- Bucket -->
+    <path d="M20 30H45V27H20V30Z" fill="#6D28D9" />
+    <path d="M20 27H23V22H20V27Z" fill="#6D28D9" />
+    <path d="M42 27H45V22H42V27Z" fill="#6D28D9" />
+    <path d="M23 22H42V25H23V22Z" fill="#6D28D9" />
+    
+    <!-- Text - positioned to ensure full visibility -->
+    <text x="65" y="38" font-family="Montserrat, sans-serif" font-weight="800" font-size="24" fill="#6D28D9">
+      ROYAL OUTDOORS
+    </text>
+  </g>
+</svg>

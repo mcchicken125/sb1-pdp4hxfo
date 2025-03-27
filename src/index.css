@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  
+  body {
+    @apply text-gray-800 font-sans bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900 font-display;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl tracking-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-4 focus:ring-primary-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800 text-white hover:bg-gray-900 focus:ring-4 focus:ring-gray-300;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-50 focus:ring-4 focus:ring-primary-300;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-20;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500;
+  }
+  
+  .form-label {
+    @apply block mb-2 text-sm font-medium text-gray-700;
+  }
+
+  .value-card {
+    @apply relative bg-white p-8 rounded-lg transition-all duration-300 cursor-pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .value-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
+  }
+
+  .value-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 2px;
+    background: linear-gradient(to right, rgba(147, 51, 234, 0), rgba(147, 51, 234, 0.3), rgba(147, 51, 234, 0));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .value-card:hover::before {
+    opacity: 1;
+  }
+
+  .value-icon {
+    @apply relative flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full transition-all duration-300;
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(147, 51, 234, 0.2));
+  }
+
+  .value-card:hover .value-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(147, 51, 234, 0.3));
+  }
+
+  .team-card {
+    @apply relative bg-white rounded-xl overflow-hidden transition-all duration-500;
+  }
+
+  .team-card-glow {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500;
+    background: radial-gradient(circle at center, rgba(147, 51, 234, 0.2) 0%, transparent 70%);
+  }
+
+  .team-card:hover .team-card-glow {
+    @apply opacity-100;
+  }
+
+  .team-card-image {
+    @apply relative h-64 overflow-hidden;
+  }
+
+  .team-card-content {
+    @apply relative p-6 bg-white;
+  }
+
+  .faq-card {
+    @apply bg-white p-6 rounded-lg shadow-md relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
+  }
+
+  .faq-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .faq-card:hover::before {
+    opacity: 1;
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .faq-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    padding: 2px;
+    background: linear-gradient(
+      to right,
+      rgba(139, 92, 246, 0),
+      rgba(139, 92, 246, 0.3),
+      rgba(139, 92, 246, 0)
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .faq-card:hover::after {
+    opacity: 1;
+  }
+
+  /* Animation for popup fade-in */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0.95);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .faq-card::before,
+  .faq-card::after {
+    animation: none;
+    transition: none;
+  }
+}
